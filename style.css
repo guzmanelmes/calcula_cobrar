@@ -1,0 +1,229 @@
+/* Todo el Documento */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Logo*/
+
+.logo a {
+    /*color: rgb(226, 226, 226);*/
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/* Menu */
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgba(114, 114, 114, 0.301);
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+}
+
+.nav-link li {
+    list-style: none;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-link a:hover {
+    background-color: #777174;
+    border-radius: 5px;
+}
+
+
+/* Menu Hamburguesa*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3 ease;
+}
+
+
+/* Seccion Inicio*/
+
+.Inicio {
+    background-color: rgba(53, 102, 207, 0.918);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.Inicio-Centrar {
+    margin-top: -10em;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.514);
+    display: block;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.Inicio-Centrar h2 {
+    display: contents;
+    font-size: 30px;
+    text-align: justify;
+}
+
+table {
+    margin: auto;
+    text-align: right;
+}
+
+table td {
+    text-align: left;
+}
+
+.Inicio-Centrar label {
+    font-size: 45px;
+}
+
+.caja {
+    font-size: 45px;
+}
+
+
+/* Seccion Contacto*/
+
+.Contacto {
+    padding-top: -6em;
+    background-image: url('./images/fondo2.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contacto-Centrar {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.Contacto-Centrar h2 {
+    font-size: 30px;
+}
+
+.Contacto-Centrar img:hover {
+    background-color: rgba(255, 255, 255, 0.712);
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+
+/*Nav Responsive*/
+
+@media screen and (max-width:768px) {
+    .nav-link {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        height: 60vh;
+        top: 8vh;
+        background-color: #056dffb4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-link li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+    /*InicioResponsive */
+    .Inicio-Centrar h2 {
+        padding-top: 0em;
+        display: contents;
+        font-size: 20px;
+        text-align: justify;
+    }
+    table {
+        margin: auto;
+        text-align: right;
+        font-size: 14px;
+    }
+    .Inicio-Centrar label {
+        font-size: 20px;
+    }
+    .caja {
+        font-size: 20px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: o;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/*Menu Hamburguesa animado*/
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
